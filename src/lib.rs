@@ -26,7 +26,7 @@ pub fn projected_subgradient_descent(
 
     for _ in 0..max_iter {
         let grad_f = a * &x + q;
-        let subgrad_g = max_elementwise(&(b - &x), &(x.clone() - s));
+        let subgrad_g = max_elementwise(b, s);
         let subgrad = grad_f + subgrad_g;
 
         x = x - step_size * subgrad;
