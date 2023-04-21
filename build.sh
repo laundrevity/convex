@@ -1,2 +1,2 @@
 #!/bin/bash
-. .env/bin/activate && maturin develop
+. .env/bin/activate && pip install maturin && maturin develop
